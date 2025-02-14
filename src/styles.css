@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  & .header {
+    flex-grow: 0.1;
+    background-color: red;
+    display: flex;
+    gap: 1em;
+  }
+
+  & .main-content {
+    flex: 1;
+    background-color: blue;
+    padding-bottom: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+.main-content {
+  & .weather-content {
+    background-color: blueviolet;
+    width: 35vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+
+    & .weather-info {
+      display: flex;
+      flex-grow: 1;
+      background-color: red;
+    }
+  }
+}

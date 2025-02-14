@@ -1,6 +1,37 @@
-<!-- "scripts": {
-    "build": "webpack",
-    "dev": "webpack serve",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
-}, 
-Put that in JSON file after you run "npm init --y"-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather App</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <p class="main-text">Weather App</p>
+                <p>Based on <a href="#">VirtualCrossingAPI</a></p>
+            </div>
+            <div class="main-content">
+                <div class="weather-content">
+                    <p class="conditions">Conditions</p>
+                    <p class="location">Location, city, country</p>
+                    <div class="weather-info">
+                        <div class="temp">
+                            <p>40Cel</p>
+                        </div>
+                        <div class="info">
+                            <p>Feels Like</p>
+                            <p>Wind 20202km</p>
+                            <p>Humidity 71%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-area">
+                    <input type="text" name="search" id="search">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
