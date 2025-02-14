@@ -24,7 +24,7 @@ async function getWeatherInfo(location) {
         console.log(weatherData);
         return weatherData
     } catch {
-        console.log('error');
+        console.log('error data not found');
     }
 }
 async function makeScreenInfo(location) {
@@ -40,8 +40,24 @@ async function makeScreenInfo(location) {
         data.push(currentData.currentConditions.humidity);
         storeWeatherInfo(data);
     } catch {
-        console.log('error');
+        data.push("Not Found");
+        data.push("Not Found");
+        data.push("Not Found");
+        data.push("Not Found");
+        data.push("Not Found");
+        data.push("Not Found");
+        storeWeatherInfo(data);
     }
 }
 
-makeScreenInfo("Jakarta");
+document.addEventListener("DOMContentLoaded", () => {
+    makeScreenInfo("Jakarta");
+});
+
+const searchBtn = document.querySelector(".submit");
+const input = document.getElementById("search");
+
+searchBtn.addEventListener("click", () => {
+    makeScreenInfo(input.value);
+});
+
